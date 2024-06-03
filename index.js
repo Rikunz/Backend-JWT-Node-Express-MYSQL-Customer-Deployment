@@ -14,13 +14,14 @@ try {
     console.error(error);
 }
 const corsOptions = {
-    origin: "https://project-thoriq.de.r.appspot.com", // Alamat domain React
+    origin: "https://project-thoriq.de.r.appspot.com/", // Alamat domain React
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Mengizinkan pengiriman cookies
     optionsSuccessStatus: 204,
 };
 app.use(Cors(corsOptions));
 app.use(express.json());
+app.use(express.static("/"));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
