@@ -14,7 +14,7 @@ try {
     console.error(error);
 }
 const corsOptions = {
-    origin: "https://testee-zd55fboz5a-uc.a.run.app", // Alamat domain React
+    origin: "https://project-thoriq.de.r.appspot.com/", // Alamat domain React
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Mengizinkan pengiriman cookies
     optionsSuccessStatus: 204,
