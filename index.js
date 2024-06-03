@@ -14,7 +14,7 @@ try {
     console.error(error);
 }
 
-app.use(cors({ credentials: true, origin: "*" }));
+app.use(cors({ credentials: true, origin: "https://project-thoriq.de.r.appspot.com/" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
