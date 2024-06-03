@@ -1,6 +1,7 @@
 import Users from "../models/UserModel.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import { NONE } from "sequelize";
 
 export const getUsers = async (req, res) => {
     try {
@@ -55,7 +56,8 @@ export const Login = async (req, res) => {
         });
         res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000
+            maxAge: 24 * 60 * 60 * 1000,
+            sameSite: "none"
         });
         res.json({ accessToken });
     } catch (error) {

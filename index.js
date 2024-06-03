@@ -21,7 +21,6 @@ const corsOptions = {
 };
 app.use(Cors(corsOptions));
 app.use(express.json());
-app.use(express.static("/"));
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
